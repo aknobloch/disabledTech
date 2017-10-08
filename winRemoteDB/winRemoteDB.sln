@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "winRemoteDB", "winRemoteDB\winRemoteDB.csproj", "{A0EA2E3F-944A-4B4D-AA2B-DA4CB9C0A058}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A0EA2E3F-944A-4B4D-AA2B-DA4CB9C0A058}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0EA2E3F-944A-4B4D-AA2B-DA4CB9C0A058}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0EA2E3F-944A-4B4D-AA2B-DA4CB9C0A058}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0EA2E3F-944A-4B4D-AA2B-DA4CB9C0A058}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4730DC59-8287-457D-BDE5-23043F7E9997}
+	EndGlobalSection
+EndGlobal
