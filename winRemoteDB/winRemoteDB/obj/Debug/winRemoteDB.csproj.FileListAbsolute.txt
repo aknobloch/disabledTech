@@ -1,0 +1,16 @@
+c:\users\jgraves3\source\repos\winRemoteDB\winRemoteDB\bin\Debug\winRemoteDB.exe.config
+c:\users\jgraves3\source\repos\winRemoteDB\winRemoteDB\bin\Debug\winRemoteDB.exe
+c:\users\jgraves3\source\repos\winRemoteDB\winRemoteDB\bin\Debug\winRemoteDB.pdb
+c:\users\jgraves3\source\repos\winRemoteDB\winRemoteDB\bin\Debug\EntityFramework.dll
+c:\users\jgraves3\source\repos\winRemoteDB\winRemoteDB\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\jgraves3\source\repos\winRemoteDB\winRemoteDB\bin\Debug\System.Data.SQLite.dll
+c:\users\jgraves3\source\repos\winRemoteDB\winRemoteDB\bin\Debug\System.Data.SQLite.EF6.dll
+c:\users\jgraves3\source\repos\winRemoteDB\winRemoteDB\bin\Debug\System.Data.SQLite.Linq.dll
+c:\users\jgraves3\source\repos\winRemoteDB\winRemoteDB\bin\Debug\EntityFramework.xml
+c:\users\jgraves3\source\repos\winRemoteDB\winRemoteDB\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\jgraves3\source\repos\winRemoteDB\winRemoteDB\bin\Debug\System.Data.SQLite.xml
+c:\users\jgraves3\source\repos\winRemoteDB\winRemoteDB\bin\Debug\System.Data.SQLite.dll.config
+c:\users\jgraves3\source\repos\winRemoteDB\winRemoteDB\obj\Debug\winRemoteDB.csprojResolveAssemblyReference.cache
+c:\users\jgraves3\source\repos\winRemoteDB\winRemoteDB\obj\Debug\winRemoteDB.csproj.CoreCompileInputs.cache
+c:\users\jgraves3\source\repos\winRemoteDB\winRemoteDB\obj\Debug\winRemoteDB.exe
+c:\users\jgraves3\source\repos\winRemoteDB\winRemoteDB\obj\Debug\winRemoteDB.pdb
