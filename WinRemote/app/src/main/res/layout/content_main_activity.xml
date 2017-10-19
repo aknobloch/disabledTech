@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.disabledtech.winremote.view.MainActivity"
+    tools:showIn="@layout/app_bar_main_activity">
+
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="fill_horizontal|fill_vertical"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+
+        android:orientation="vertical"
+      >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <com.disabledtech.winremote.model.WinActionButton
+                android:id="@+id/winActionButton"
+                style="@style/Button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#00A6FF"
+                android:text="Copy"
+                app:remoteId="0" />
+
+            <com.disabledtech.winremote.model.WinActionButton
+                android:id="@+id/winActionButton2"
+                style="@style/Button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#00A6FF"
+                android:text="Paste" />
+
+            <com.disabledtech.winremote.model.WinActionButton
+                android:id="@+id/winActionButton3"
+                style="@style/Button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#00A6FF"
+                android:text="Esc" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <com.disabledtech.winremote.model.WinActionButton
+                android:id="@+id/winActionButton4"
+                style="@style/Button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#00A6FF"
+                android:text="Del"
+                app:remoteId="0" />
+
+            <com.disabledtech.winremote.model.WinActionButton
+                android:id="@+id/winActionButton5"
+                style="@style/Button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#00A6FF"
+                android:text="Select All" />
+
+            <com.disabledtech.winremote.model.WinActionButton
+                android:id="@+id/winActionButton6"
+                style="@style/Button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#00A6FF"
+                android:text="Sandwiches" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <com.disabledtech.winremote.model.WinActionButton
+                android:id="@+id/winActionButton7"
+                style="@style/Button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#00A6FF"
+                android:text="This"
+                app:remoteId="0" />
+
+            <com.disabledtech.winremote.model.WinActionButton
+                android:id="@+id/winActionButton8"
+                style="@style/Button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#00A6FF"
+                android:text="Looks" />
+
+            <com.disabledtech.winremote.model.WinActionButton
+                android:id="@+id/winActionButton9"
+                style="@style/Button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#00A6FF"
+                android:text="OK?" />
+
+        </LinearLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
