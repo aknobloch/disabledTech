@@ -40,6 +40,7 @@ import java.util.List;
 
 import static android.R.attr.action;
 
+<<<<<<< HEAD
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, IServerConnectionListener, View.OnClickListener {
 
     private static final int REQUEST_ACCESS_COARSE_LOCATION = 1; // used to identify permission requests
@@ -75,21 +76,30 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         WinActionButton button= (WinActionButton) findViewById(R.id.winActionButton);
         button.setAction(new WinAction("copy",1));
         List<WinAction> userActions = new LinkedList<>();
+=======
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, IServerConnectionListener, View.OnClickListener
+{
+>>>>>>> e580b9d38dc329c24243aaaa3e51df7de206b293
 
-        beginServerConnection();
-    }
+	private static final int REQUEST_ACCESS_COARSE_LOCATION = 1; // used to identify permission requests
 
+<<<<<<< HEAD
 
     /*public void onClick(View view)
     {
         try {
+=======
+	private BTConnectionClient m_ConnectionClient;
+	private BTDataIO m_DataIO;
+>>>>>>> e580b9d38dc329c24243aaaa3e51df7de206b293
 
+	IServerConnectionListener listener=new IServerConnectionListener() {
+		@Override
+		public void serverConnected(BluetoothSocket connectedSocket) {
 
-            if (view instanceof WinActionButton) {
-                handleWinButtonPressed((WinActionButton) view);
-                return;
-            }
+		}
 
+<<<<<<< HEAD
             Debug.logError("UI view click not implemented!");
         }
 
@@ -297,11 +307,23 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 =======
 		implements NavigationView.OnNavigationItemSelectedListener, IServerConnectionListener, View.OnClickListener
 {
+=======
+		@Override
+		public void notifyCriticalFailure(SERVER_ERROR_CODE error) {
 
-	private static final int REQUEST_ACCESS_COARSE_LOCATION = 1; // used to identify permission requests
+		}
+>>>>>>> e580b9d38dc329c24243aaaa3e51df7de206b293
 
+		@Override
+		public void notifyRecoverableFailure(SERVER_ERROR_CODE error) {
+
+<<<<<<< HEAD
 	private BTConnectionClient m_ConnectionClient;
 	private BTDataIO m_DataIO;*/
+=======
+		}
+	};
+>>>>>>> e580b9d38dc329c24243aaaa3e51df7de206b293
 
 	/*@Override
 	protected void onCreate(Bundle savedInstanceState)
@@ -326,7 +348,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 			return;
 		}
 
+		
+
 		Debug.logError("UI view click not implemented!");
+	}
+
+	public void send(WinAction wa){
+
 	}
 
 	private void handleWinButtonPressed(WinActionButton buttonPressed)
@@ -542,9 +570,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 		return true;
 	}
 
+<<<<<<< HEAD
 	private void onWinActionButtonClick(View v) {
 		WinActionButton actionButton = (WinActionButton) v;
 		Toast.makeText((MainActivity.this), actionButton.getText() + " selected.", Toast.LENGTH_SHORT).show();
+=======
+	public void onWinActionButtonClick(View v) {
+		WinActionButton actionButton = (WinActionButton) v;
+		Device.showToast(this, actionButton.getText() + " selected.");
+>>>>>>> e580b9d38dc329c24243aaaa3e51df7de206b293
 	}
 
 }
