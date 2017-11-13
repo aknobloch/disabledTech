@@ -17,7 +17,6 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
-
         android:orientation="vertical"
       >
 
@@ -35,7 +34,8 @@
                 android:layout_weight="1"
                 android:background="#00A6FF"
                 android:text="Copy"
-                app:remoteId="0" />
+                app:remoteId="0"
+                tools:text="Copy" />
 
             <com.disabledtech.winremote.model.WinActionButton
                 android:id="@+id/winActionButton2"
@@ -44,7 +44,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="#00A6FF"
-                android:text="Paste" />
+                android:text="Paste"
+                tools:text="Paste" />
 
             <com.disabledtech.winremote.model.WinActionButton
                 android:id="@+id/winActionButton3"
@@ -53,7 +54,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="#00A6FF"
-                android:text="Esc" />
+                android:text="Esc"
+                tools:text="Esc" />
 
         </LinearLayout>
 
@@ -71,7 +73,8 @@
                 android:layout_weight="1"
                 android:background="#00A6FF"
                 android:text="Del"
-                app:remoteId="0" />
+                app:remoteId="0"
+                tools:text="Del" />
 
             <com.disabledtech.winremote.model.WinActionButton
                 android:id="@+id/winActionButton5"
@@ -80,7 +83,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="#00A6FF"
-                android:text="Select All" />
+                android:text="Select All"
+                tools:text="Select All" />
 
             <com.disabledtech.winremote.model.WinActionButton
                 android:id="@+id/winActionButton6"
@@ -89,7 +93,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="#00A6FF"
-                android:text="Sandwiches" />
+                android:text="Home"
+                tools:text="Home" />
 
         </LinearLayout>
 
@@ -106,8 +111,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="#00A6FF"
-                android:text="This"
-                app:remoteId="0" />
+                android:text="Page UP"
+                app:remoteId="0"
+                tools:text="Page UP" />
 
             <com.disabledtech.winremote.model.WinActionButton
                 android:id="@+id/winActionButton8"
@@ -116,7 +122,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="#00A6FF"
-                android:text="Looks" />
+                android:text="Page DOWN"
+                tools:text="Page DOWN" />
 
             <com.disabledtech.winremote.model.WinActionButton
                 android:id="@+id/winActionButton9"
@@ -125,7 +132,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="#00A6FF"
-                android:text="OK?" />
+                android:text="CAPS LOCK"
+                tools:text="CAPS LOCK" />
 
         </LinearLayout>
     </LinearLayout>

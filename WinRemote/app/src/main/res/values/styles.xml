@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -10,7 +10,6 @@
     </style>
 
     <style name="Button" parent="Widget.AppCompat.Button" >
-        <item name="background">@drawable/ic_menu_gallery</item>
         <item name="android:layout_margin">2dp</item>
     </style>
     <style name="AppTheme.NoActionBar">

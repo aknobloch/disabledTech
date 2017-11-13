@@ -40,7 +40,7 @@ import java.util.List;
 
 import static android.R.attr.action;
 
-<<<<<<< HEAD
+
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, IServerConnectionListener, View.OnClickListener {
 
     private static final int REQUEST_ACCESS_COARSE_LOCATION = 1; // used to identify permission requests
@@ -68,278 +68,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        super.onCreate(savedInstanceState);
-
-        // TODO user feedback while connection to server is being established
-        initializeLayout();
-
-        WinActionButton button= (WinActionButton) findViewById(R.id.winActionButton);
-        button.setAction(new WinAction("copy",1));
-        List<WinAction> userActions = new LinkedList<>();
-=======
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, IServerConnectionListener, View.OnClickListener
-{
->>>>>>> e580b9d38dc329c24243aaaa3e51df7de206b293
-
-	private static final int REQUEST_ACCESS_COARSE_LOCATION = 1; // used to identify permission requests
-
-<<<<<<< HEAD
-
-    /*public void onClick(View view)
-    {
-        try {
-=======
-	private BTConnectionClient m_ConnectionClient;
-	private BTDataIO m_DataIO;
->>>>>>> e580b9d38dc329c24243aaaa3e51df7de206b293
-
-	IServerConnectionListener listener=new IServerConnectionListener() {
-		@Override
-		public void serverConnected(BluetoothSocket connectedSocket) {
-
-		}
-
-<<<<<<< HEAD
-            Debug.logError("UI view click not implemented!");
-        }
-
-        catch(Exception e) {
-        Debug.logError(e.getMessage());
-    }
-    }*/
-
-    public void send(WinAction wa){
-
-    }
-
-    /*private void handleWinButtonPressed(WinActionButton buttonPressed)
-    {
-        try
-        {
-            WinAction action=buttonPressed.getWinAction();
-            if(action != null)
-                m_DataIO.send(action);
-            else{
-                Debug.logError("Null Action");
-            }
-
-        }
-        catch (Exception e)
-        {
-            // TODO UI feedback
-            Debug.logError("Error sending button information to server.");
-            e.printStackTrace();
-        }
-    }*/
-
-    /*@Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-
-        int id = item.getItemId();
-
-        // TODO options menu
-        switch(id)
-        {
-            case R.id.action_connect:
-                Device.showToast(this, "Attempting connection...");
-                getServerConnection();
-                return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }*/
-
-
-    /*public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        int id = item.getItemId();
-
-        switch(id)
-        {
-            // TODO templates
-        }
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
-
-        return true;
-    }*/
-
-    /*public void onBackPressed() {
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-
-        // if the template drawer is open, back should just close it
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-
-            drawer.closeDrawer(GravityCompat.START);
-            return;
-        }
-
-        super.onBackPressed();
-    }*/
-
-    /**
-     * Requests bluetooth connection permissions if applicable,
-     * and then starts the server connection process.
-     *
-     */
-    /*private void beginServerConnection() {
-
-        if(Device.hasBluetoothPermissions(this))
-        {
-            getServerConnection();
-            return;
-        }
-
-        // TODO display reason for coarse location (needs it to discover BT devices)
-        ActivityCompat.requestPermissions(this,
-                new String[]{Manifest.permission.ACCESS_COARSE_LOCATION},
-                REQUEST_ACCESS_COARSE_LOCATION);
-    }*/
-
-    /**
-     * Initializes a {@link BTConnectionClient} and begins the connection
-     * process.
-     */
-    /*public void getServerConnection() {
-
-        if(m_ConnectionClient == null)
-        {
-            m_ConnectionClient = new BTConnectionClient(this, this);
-        }
-
-        m_ConnectionClient.connectToServer();
-    }*/
-
-        /**
-     * Returned after the request permission dialog is given. If permissions
-     * were successful, then a server connection will attempt to be established.
-     *
-     //* @param requestCode
-     //* @param permissions
-     //* @param grantResults
-     */
-    /*@Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-
-        boolean permissionGranted = grantResults.length > 0 &&
-                grantResults[0] == PackageManager.PERMISSION_GRANTED;
-
-        if(permissionGranted == false)
-        {
-            return; // TODO handle refused connection (prompt and close, likely.) update docs.
-        }
-
-        switch(requestCode)
-        {
-            case REQUEST_ACCESS_COARSE_LOCATION :
-
-                getServerConnection();
-                break;
-        }
-    }*/
-
-    /*@Override
-    public void serverConnected(BluetoothSocket connectedSocket) {
-
-        Device.showToast(this, "Connection to the server made!");
-        m_DataIO = new BTDataIO(connectedSocket);
-
-        List<WinAction> userActions = m_DataIO.getActionData();
-        populateActivityButtons(userActions);
-    }*/
-
-    /**
-     * Takes the given list of WinActions and populates the UI based on
-     * those actions.
-     *
-     * @param userActions
-     */
-    /*private void populateActivityButtons(List<WinAction> userActions)
-    {
-        LinearLayout layout = (LinearLayout) findViewById(R.id.linear_layout);
-
-        // TODO pretty buttons
-        for(WinAction action : userActions)
-        {
-            WinActionButton actionButton = new WinActionButton(this, action);
-            actionButton.setOnClickListener(this);
-            layout.addView(actionButton);
-        }
-    }*/
-
-    /*@Override
-    public void notifyCriticalFailure(SERVER_ERROR_CODE error) {
-        // TODO handle communication with user
-        Device.showToast(this, "Connection failure " + error);
-    }*/
-
-    /*@Override
-    public void notifyRecoverableFailure(SERVER_ERROR_CODE error) {
-        // TODO handle communication with user
-        Device.showToast(this, "Connection failure " + error);
-    }*/
-
-    /*private void initializeLayout() {
-
-        setContentView(R.layout.activity_main);
-
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
-        toggle.syncState();
-
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
-    }*/
-
-    /*@Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main_interface, menu);
-        return true;
-    }
-=======
-		implements NavigationView.OnNavigationItemSelectedListener, IServerConnectionListener, View.OnClickListener
-{
-=======
-		@Override
-		public void notifyCriticalFailure(SERVER_ERROR_CODE error) {
-
-		}
->>>>>>> e580b9d38dc329c24243aaaa3e51df7de206b293
-
-		@Override
-		public void notifyRecoverableFailure(SERVER_ERROR_CODE error) {
-
-<<<<<<< HEAD
-	private BTConnectionClient m_ConnectionClient;
-	private BTDataIO m_DataIO;*/
-=======
-		}
-	};
->>>>>>> e580b9d38dc329c24243aaaa3e51df7de206b293
-
-	/*@Override
-	protected void onCreate(Bundle savedInstanceState)
-	{
-
 		super.onCreate(savedInstanceState);
 
 		// TODO user feedback while connection to server is being established
 		initializeLayout();
-	}*/
 
-	/**
-	 * Called when a component of the UI is pressed.
-	 *
-	 * @param view
-	 */
+		WinActionButton button = (WinActionButton) findViewById(R.id.winActionButton);
+		button.setAction(new WinAction("copy", 1));
+		List<WinAction> userActions = new LinkedList<>();
+	}
+
+
 	public void onClick(View view)
 	{
 		if (view instanceof WinActionButton)
@@ -368,6 +107,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 			Debug.logError("Error sending button information to server.");
 			e.printStackTrace();
 		}
+
 	}
 
 	@Override
@@ -570,15 +310,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 		return true;
 	}
 
-<<<<<<< HEAD
-	private void onWinActionButtonClick(View v) {
-		WinActionButton actionButton = (WinActionButton) v;
-		Toast.makeText((MainActivity.this), actionButton.getText() + " selected.", Toast.LENGTH_SHORT).show();
-=======
 	public void onWinActionButtonClick(View v) {
 		WinActionButton actionButton = (WinActionButton) v;
 		Device.showToast(this, actionButton.getText() + " selected.");
->>>>>>> e580b9d38dc329c24243aaaa3e51df7de206b293
+
 	}
 
 }

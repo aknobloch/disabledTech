@@ -1,2 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <!--<?xml version="1.0" encoding="utf-8"?>
+    <selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+        &lt;!&ndash; Image display in background in select state &ndash;&gt;
+        <item android:drawable="@drawable/button_pressed" android:state_pressed="true"/>
+
+        &lt;!&ndash; Image display in background in select state &ndash;&gt;
+        <item android:drawable="@drawable/button_pressed" android:state_focused="true"/>
+
+        &lt;!&ndash; Default state &ndash;&gt;
+        <item android:drawable="@drawable/Button"/>
+
+    </selector>-->
+</resources>
