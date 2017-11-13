@@ -18,10 +18,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.GridLayout;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.disabledtech.winremote.R;
 import com.disabledtech.winremote.control.BTConnectionClient;
@@ -38,9 +40,7 @@ import java.util.List;
 
 import static android.R.attr.action;
 
-public class MainActivity extends AppCompatActivity
-<<<<<<< HEAD
-        implements NavigationView.OnNavigationItemSelectedListener, IServerConnectionListener, View.OnClickListener {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, IServerConnectionListener, View.OnClickListener {
 
     private static final int REQUEST_ACCESS_COARSE_LOCATION = 1; // used to identify permission requests
 
@@ -79,12 +79,8 @@ public class MainActivity extends AppCompatActivity
         beginServerConnection();
     }
 
-    /**
-     * Called when a component of the UI is pressed.
-     *
-     * @param view
-     */
-    public void onClick(View view)
+
+    /*public void onClick(View view)
     {
         try {
 
@@ -100,13 +96,13 @@ public class MainActivity extends AppCompatActivity
         catch(Exception e) {
         Debug.logError(e.getMessage());
     }
-    }
+    }*/
 
     public void send(WinAction wa){
 
     }
 
-    private void handleWinButtonPressed(WinActionButton buttonPressed)
+    /*private void handleWinButtonPressed(WinActionButton buttonPressed)
     {
         try
         {
@@ -124,9 +120,9 @@ public class MainActivity extends AppCompatActivity
             Debug.logError("Error sending button information to server.");
             e.printStackTrace();
         }
-    }
+    }*/
 
-    @Override
+    /*@Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
         int id = item.getItemId();
@@ -141,10 +137,10 @@ public class MainActivity extends AppCompatActivity
         }
 
         return super.onOptionsItemSelected(item);
-    }
+    }*/
 
-    @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
+
+    /*public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
@@ -157,10 +153,9 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
 
         return true;
-    }
+    }*/
 
-    @Override
-    public void onBackPressed() {
+    /*public void onBackPressed() {
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
 
@@ -172,14 +167,14 @@ public class MainActivity extends AppCompatActivity
         }
 
         super.onBackPressed();
-    }
+    }*/
 
     /**
      * Requests bluetooth connection permissions if applicable,
      * and then starts the server connection process.
      *
      */
-    private void beginServerConnection() {
+    /*private void beginServerConnection() {
 
         if(Device.hasBluetoothPermissions(this))
         {
@@ -191,13 +186,13 @@ public class MainActivity extends AppCompatActivity
         ActivityCompat.requestPermissions(this,
                 new String[]{Manifest.permission.ACCESS_COARSE_LOCATION},
                 REQUEST_ACCESS_COARSE_LOCATION);
-    }
+    }*/
 
     /**
      * Initializes a {@link BTConnectionClient} and begins the connection
      * process.
      */
-    public void getServerConnection() {
+    /*public void getServerConnection() {
 
         if(m_ConnectionClient == null)
         {
@@ -205,17 +200,17 @@ public class MainActivity extends AppCompatActivity
         }
 
         m_ConnectionClient.connectToServer();
-    }
+    }*/
 
         /**
      * Returned after the request permission dialog is given. If permissions
      * were successful, then a server connection will attempt to be established.
      *
-     * @param requestCode
-     * @param permissions
-     * @param grantResults
+     //* @param requestCode
+     //* @param permissions
+     //* @param grantResults
      */
-    @Override
+    /*@Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
 
         boolean permissionGranted = grantResults.length > 0 &&
@@ -233,9 +228,9 @@ public class MainActivity extends AppCompatActivity
                 getServerConnection();
                 break;
         }
-    }
+    }*/
 
-    @Override
+    /*@Override
     public void serverConnected(BluetoothSocket connectedSocket) {
 
         Device.showToast(this, "Connection to the server made!");
@@ -243,7 +238,7 @@ public class MainActivity extends AppCompatActivity
 
         List<WinAction> userActions = m_DataIO.getActionData();
         populateActivityButtons(userActions);
-    }
+    }*/
 
     /**
      * Takes the given list of WinActions and populates the UI based on
@@ -251,7 +246,7 @@ public class MainActivity extends AppCompatActivity
      *
      * @param userActions
      */
-    private void populateActivityButtons(List<WinAction> userActions)
+    /*private void populateActivityButtons(List<WinAction> userActions)
     {
         LinearLayout layout = (LinearLayout) findViewById(R.id.linear_layout);
 
@@ -262,21 +257,21 @@ public class MainActivity extends AppCompatActivity
             actionButton.setOnClickListener(this);
             layout.addView(actionButton);
         }
-    }
+    }*/
 
-    @Override
+    /*@Override
     public void notifyCriticalFailure(SERVER_ERROR_CODE error) {
         // TODO handle communication with user
         Device.showToast(this, "Connection failure " + error);
-    }
+    }*/
 
-    @Override
+    /*@Override
     public void notifyRecoverableFailure(SERVER_ERROR_CODE error) {
         // TODO handle communication with user
         Device.showToast(this, "Connection failure " + error);
-    }
+    }*/
 
-    private void initializeLayout() {
+    /*private void initializeLayout() {
 
         setContentView(R.layout.activity_main);
 
@@ -291,9 +286,9 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-    }
+    }*/
 
-    @Override
+    /*@Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main_interface, menu);
@@ -306,9 +301,9 @@ public class MainActivity extends AppCompatActivity
 	private static final int REQUEST_ACCESS_COARSE_LOCATION = 1; // used to identify permission requests
 
 	private BTConnectionClient m_ConnectionClient;
-	private BTDataIO m_DataIO;
+	private BTDataIO m_DataIO;*/
 
-	@Override
+	/*@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
 
@@ -316,7 +311,7 @@ public class MainActivity extends AppCompatActivity
 
 		// TODO user feedback while connection to server is being established
 		initializeLayout();
-	}
+	}*/
 
 	/**
 	 * Called when a component of the UI is pressed.
@@ -481,14 +476,29 @@ public class MainActivity extends AppCompatActivity
 	 */
 	private void populateActivityButtons(List<WinAction> userActions)
 	{
-		GridLayout layout = (GridLayout) findViewById(R.id.grid_layout);
+		LinearLayout layout = (LinearLayout) findViewById(R.id.linear_layout);
 
 		// TODO pretty buttons
 		for (WinAction action : userActions)
 		{
-			WinActionButton actionButton = new WinActionButton(this, action);
+			final WinActionButton actionButton = new WinActionButton(this, action);
 			actionButton.setOnClickListener(this);
 			layout.addView(actionButton);
+
+			actionButton.setOnTouchListener(new View.OnTouchListener() {
+
+				public boolean onTouch(View v, MotionEvent event) {
+					if (event.getAction() == MotionEvent.ACTION_DOWN) {
+						actionButton.setBackgroundColor(Color.parseColor("#000000"));
+					}
+
+					else if(event.getAction() == MotionEvent.ACTION_UP) {
+						actionButton.setBackgroundColor(Color.parseColor("#00A6FF"));
+					}
+
+					return true;
+				}
+			});
 		}
 	}
 
@@ -531,5 +541,10 @@ public class MainActivity extends AppCompatActivity
 		getMenuInflater().inflate(R.menu.main_interface, menu);
 		return true;
 	}
->>>>>>> 431259a5df02a256b37ed452699d7056f5ddae02
+
+	private void onWinActionButtonClick(View v) {
+		WinActionButton actionButton = (WinActionButton) v;
+		Toast.makeText((MainActivity.this), actionButton.getText() + " selected.", Toast.LENGTH_SHORT).show();
+	}
+
 }

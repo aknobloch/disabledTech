@@ -3,9 +3,12 @@ package com.disabledtech.winremote.model;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
+import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.disabledtech.winremote.R;
+import com.disabledtech.winremote.utils.Device;
 import com.disabledtech.winremote.view.MainActivity;
 
 /**
@@ -18,8 +21,7 @@ import com.disabledtech.winremote.view.MainActivity;
 
 public class WinActionButton extends android.support.v7.widget.AppCompatButton
 {
-<<<<<<< HEAD
-    private WinAction m_Action;
+
 int remoteId;
     public WinActionButton(Context context, AttributeSet attrs){
         super(context,attrs);
@@ -58,16 +60,11 @@ int remoteId;
     private void setOnClickListener(WinActionButton winActionButton) {
         ((MainActivity)getContext()).send(m_Action);
     }
-=======
+
 	private WinAction m_Action;
 
-	public WinActionButton(Context context, WinAction action)
-	{
-		super(context);
-		m_Action = action;
-		this.setText(action.getDisplayName());
-	}
->>>>>>> 431259a5df02a256b37ed452699d7056f5ddae02
+
+
 
 	public String getDisplayName()
 	{
@@ -79,7 +76,7 @@ int remoteId;
 		return m_Action.getID();
 	}
 
-<<<<<<< HEAD
+
     public WinAction getWinAction()
     {
         return m_Action;
@@ -88,10 +85,5 @@ int remoteId;
     public void setAction(WinAction a) {
         m_Action=a;
     }
-=======
-	public WinAction getWinAction()
-	{
-		return m_Action;
-	}
->>>>>>> 431259a5df02a256b37ed452699d7056f5ddae02
+
 }
