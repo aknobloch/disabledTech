@@ -1,0 +1,93 @@
+<style type="text/css">
+.DT_form{
+    max-width: 450px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.DT_form label{
+    display:block;
+    margin-bottom: 10px;
+}
+.DT_form label > span{
+    float: left;
+    width: 100px;
+    color: #1E2D3E;
+    font-weight: bold;
+    font-size: 13px;
+    text-shadow: 1px 1px 1px #fff;
+}
+.DT_form fieldset{
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    margin: 0px 0px 10px 0px;
+    border: 1px solid #808080;
+    padding: 20px;
+    background: #FFF;
+    box-shadow: inset 0px 0px 15px #8cd8ff;
+    -moz-box-shadow: inset 0px 0px 15px #8cd8ff;
+    -webkit-box-shadow: inset 0px 0px 15px #8cd8ff;
+}
+.DT_form fieldset legend{
+    color: #00A6FF ;
+    border-top: 1px solid #808080;
+    border-left: 1px solid #808080;
+    border-right: 1px solid #808080;
+    border-radius: 5px 5px 0px 0px;
+    -webkit-border-radius: 5px 5px 0px 0px;
+    -moz-border-radius: 5px 5px 0px 0px;
+    background: #FFF;
+    padding: 0px 8px 3px 8px;
+    box-shadow: -0px -1px 2px #8cd8ff;
+    -moz-box-shadow:-0px -1px 2px #8cd8ff;
+    -webkit-box-shadow:-0px -1px 2px #8cd8ff;
+    font-weight: normal;
+    font-size: 12px;
+}
+.DT_form textarea{
+    width:250px;
+    height:100px;
+}
+.DT_form input[type=text],
+.DT_form input[type=date],
+.DT_form input[type=datetime],
+.DT_form input[type=number],
+.DT_form input[type=search],
+.DT_form input[type=time],
+.DT_form input[type=url],
+.DT_form input[type=email],
+.DT_form select,
+.DT_form textarea,
+.DT_form option {
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border: 1px solid #808080;
+    outline: none;
+    color: #263445;
+    padding: 5px 8px 5px 8px;
+    box-shadow: inset 1px 1px 4px #8cd8ff;
+    -moz-box-shadow: inset 1px 1px 4px #8cd8ff;
+    -webkit-box-shadow: inset 1px 1px 4px #8cd8ff;
+    background: #FFF;
+    width:50%;
+}
+.DT_form  input[type=submit],
+.DT_form  input[type=button]{
+    background: #FFF;
+    border: 1px solid #808080;
+    padding: 5px 15px 5px 15px;
+    color: #263445;
+    box-shadow: inset -1px -1px 3px #8cd8ff;
+    -moz-box-shadow: inset -1px -1px 3px #8cd8ff;
+    -webkit-box-shadow: inset -1px -1px 3px #8cd8ff;
+    border-radius: 3px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    font-weight: bold;
+}
+.required{
+    color:red;
+    font-weight:normal;
+}
+</style>

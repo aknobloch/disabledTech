@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel = "stylesheet" type = "text/css" href = "main.css" />
+  <title>Disabled Tech</title>
+</head>
+<body>
+
+  <script>
+  function submitThis() {
+      alert('Form submitted!');
+      document.getElementByClass("my-form").submit();
+  }
+  </script>
+
+  <div class="DT_form">
+    <form onsubmit="return submitThis();" class="my-form">
+      <div id="row">
+        <fieldset style="width:40%; float:left;"><legend>Modifier</legend>
+          <label for="field1"><span>Modifier Key </span>
+            <input type="button" value=" + " onClick="addNewModifier();">
+          </label>
+        </fieldset>
+
+        <fieldset><legend>Function</legend>
+          <label for="field2"><span>Function Key </span>
+            <input type="button" value=" + " onClick="addNewFunctionKey();">
+          </label>
+        </fieldset>
+      </div>
+
+      <div id="row">
+        <fieldset style="width:40%; float:left;"><legend>Alpha</legend>
+          <label for="field3"><span>Alpha Key </span>
+            <input type="button" value=" + " onClick="addNewAlpha();">
+          </label>
+        </fieldset>
+
+        <fieldset><legend>Custom</legend>
+          <label for="field4"><span>Custom Keys </span>
+            <input type="button" value=" + " onClick="addNewCustom();">
+          </label>
+        </fieldset>
+      </div>
+
+      <fieldset><legend>Macro</legend>
+        <label for="field5"><span>Commands </span><br/>
+        </label>
+        <div id="mainContainer">
+        </div>
+      </fieldset>
+
+
+
+      <fieldset><legend>Submit</legend>
+        <label><span>&nbsp;</span><input type="submit" value="Submit" /></label>
+        <label><span>&nbsp;</span><a href="index.html"><input type="button" value="Back" /></a></label>
+      </fieldset>
+    </form>
+  </div>
+
+
+
+  <script src="myscripts.js"></script>
+</body>
+</html>
