@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel = "stylesheet" type = "text/css" href = "main.css" />
+  <title>Disabled Tech</title>
+</head>
+<body>
+
+
+  <div class="page">
+    <div class="left">
+      <div class="container">
+        <div class="header">
+          <h1>
+            Select Your Functions!
+          </h1>
+          <h3>
+            Drag and drop to combine functions<br/>
+            in the pane on the right.  You can add<br/>
+            new functions by pressing the button<br/>
+            on the bottom of this pane.
+          </h3>
+        </div>
+        <div class="main">
+          <div class="btnHolder">
+            <button class="button button2" id="copy" type="button" draggable="true" ondragstart="drag(event)">Copy</button><br/>
+            <button class="button button2" id="paste" type="button" draggable="true" ondragstart="drag(event)">Paste</button><br/>
+            <button class="button button2" id="taskManager" type="button" draggable="true" ondragstart="drag(event)">Task Manager</button><br/>
+            <button class="button button2" id="buildVS" type="button" draggable="true" ondragstart="drag(event)">Build VS Project</button><br/>
+            <button class="button button2" id="runCustom" type="button" draggable="true" ondragstart="drag(event)">Run Custom Script</button><br/>
+            <button class="button button3" id="other" type="button" draggable="true" ondragstart="drag(event)">Do Other Things</button><br/>
+          </div>
+        </div>
+        <div class="footer">
+          <button class="button button4" type="button">NEW</button>
+        </div>
+      </div>
+    </div>
+    <div class="right">
+      <div id="dropStuff" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    </div>
+
+  </div>
+
+
+
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+   <script src="myscripts.js"></script>
+</body>
+</html>
