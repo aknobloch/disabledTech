@@ -1,0 +1,113 @@
+.intro {
+    text-align:center;
+}
+
+.intro h1 {
+  font-size: 55px;
+  margin: 50px 0px 0px 0px;
+}
+
+.intro h3 {
+  color: #808080;
+  margin: 5px 0px;
+}
+
+.intro a {
+  color: #808080;
+  text-decoration: inherit; /* no underline */
+}
+
+.intro .button {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 100px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: #00A6FF; /* Blue */
+    font-size: 24px;
+    margin: 30px 0px 10px 0px;
+}
+
+.button2 {
+    font-size: 16px;
+    background-color: #3d4872; /* Blue */
+    margin: 10px 0px 0px 0px;
+}
+.button3 {
+    font-size: 16px;
+    background-color: #3d4872; /* Blue */
+    margin: 10px 0px 20px 0px;
+}
+
+.button4 {
+    background-color: #00A6FF; /* Blue */
+    font-size: 24px;
+    margin: 20px 0px 20px 0px;
+}
+
+.page {
+  width: auto;
+  height: 100%;
+  text-align:center;
+}
+
+.page .button {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    width: 80%;
+}
+
+.page .left {
+  float:left;
+}
+
+.page .container {
+  background-color: #263445;
+  margin: 0px;
+}
+
+.page .header {
+  background-color: #3d4872;
+}
+
+.page .main {
+  margin: 10px 0px 20px 0px;
+  background-color: #808080;
+}
+
+.page .btnHolder {
+  overflow-y: scroll
+}
+
+.page .footer {
+  background-color: #3d4872;
+}
+
+.page .right {
+  float:right;
+}
+
+#dropStuff {
+    width: 350px;
+    height: 600px;
+    padding: 10px;
+    margin-top: 20px;
+    border: 1px solid #aaaaaa;
+}
