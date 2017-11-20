@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel = "stylesheet" type = "text/css" href = "main.css" />
+  <title>Disabled Tech</title>
+</head>
+<body>
+
+
+  <div class="page">
+    <div class="left">
+      <div class="container">
+        <div class="header">
+          <h1>
+            Select Your Functions!
+          </h1>
+          <h3>
+            Drag and drop to combine functions<br/>
+            in the pane on the right.  You can add<br/>
+            new functions by pressing the button<br/>
+            on the bottom of this pane.
+          </h3>
+        </div>
+        <div class="main">
+          <div id="btns" class="btnHolder" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <button class="button button5" id="btn_copy" type="button" draggable="true" ondragstart="drag(event)">Copy</button><br/>
+            <button class="button button5" id="btn_paste" type="button" draggable="true" ondragstart="drag(event)">Paste</button><br/>
+            <button class="button button5" id="btn_taskManager" type="button" draggable="true" ondragstart="drag(event)">Task Manager</button><br/>
+            <button class="button button5" id="btn_buildVS" type="button" draggable="true" ondragstart="drag(event)">Build VS Project</button><br/>
+            <button class="button button5" id="btn_runCustom" type="button" draggable="true" ondragstart="drag(event)">Run Custom Script</button><br/>
+            <button class="button button5" id="btn_other" type="button" draggable="true" ondragstart="drag(event)">Do Other Things</button><br/>
+          </div>
+        </div>
+        <div class="footer">
+          <button id="myBtn" class="button button4" type="button" onclick="selectallelement('dropStuff')">NEW</button>
+        </div>
+      </div>
+    </div>
+    <div class="right">
+      <div id="dropStuff" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <p>total element no.</p>
+    <p id="sho">here</p>
+
+    </div>
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Okay! New What?</h2>
+    <button class="button button6" id="kbBtn" type="button">Keyboard Button</button><br/>
+    <button class="button button6" id="cScript" type="button">Custom Script</button><br/>
+
+  </div>
+
+</div>
+
+  </div>
+
+
+  <script>
+  var list = new Array();
+  function allowDrop(ev) {
+    ev.preventDefault();
+  }
+
+  function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+  }
+
+  function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+  }
+
+  function selectallelement(divid) {
+    var ele = document.getElementById(divid).children;
+    var match = new Array();
+    var i = fillArray(ele,match); //tried to make an array here
+    document.getElementById('sho').innerHTML = i;
+    //alert(document.getElementById('dropStuff').innerHTML);
+    //alert(list.toString());
+
+  }
+  function fillArray(e1,a1) {
+    //alert("made it to array");
+    list = [];
+    for(var i =0;i<e1.length;i++) {
+      list[i] = e1[i].id; //add the id of each element in the drop
+      if(e1[i].id.indexOf('dropStuff') == 0)
+      a1.push(e1[i]);
+    }
+    return i;
+  }
+
+  // Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+    selectallelement('dropStuff');
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+</script>
+<script src="myscripts.js"></script>
+</body>
+</html>
