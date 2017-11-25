@@ -1,186 +1,64 @@
-function addNewModifier() {
-
-  // Get the main Div in which all the other divs will be added
-  var mainContainer = document.getElementById('mainContainer');
-
-  // Create a new div for holding text and button input elements
-  var newDiv = document.createElement('div');
-
-  // Create array for modifier keys
-  var modifierKeys = ["Ctrl", "Shift", "Alt"];
-  var newDropdown = document.createElement('select');
-
-  for(i = 0; i < modifierKeys.length; i++) {
-    // Create a new text input
-
-    var newDropdownOption = document.createElement("option");
-    newDropdownOption.value = modifierKeys[i];
-    newDropdownOption.text = modifierKeys[i];
-
-    newDropdown.add(newDropdownOption);
-  }
-
-  // Create buttons for creating and removing inputs
-  var newAddButton = document.createElement('input');
-  newAddButton.type = "button";
-  newAddButton.value = " + ";
-
-  var newDelButton = document.createElement('input');
-  newDelButton.type = "button";
-  newDelButton.value = " - ";
-
-  // Append new text input to the newDiv
-  newDiv.appendChild(newDropdown);
-
-  // Append new button inputs to the newDiv
-  newDiv.appendChild(newAddButton);
-  newDiv.appendChild(newDelButton);
-
-  // Append newDiv input to the mainContainer div
-  mainContainer.appendChild(newDiv);
-
-  // Add a handler to button for deleting the newDiv from the mainContainer
-  newAddButton.onclick = addNewModifier;
-
-  newDelButton.onclick = function() {
-    mainContainer.removeChild(newDiv);
-  };
+var btn_ID_list = new Array();
+function allow_drop(event) {
+  event.preventDefault();
 }
 
-function addNewFunctionKey() {
-
-  // Get the main Div in which all the other divs will be added
-  var mainContainer = document.getElementById('mainContainer');
-
-  // Create a new div for holding text and button input elements
-  var newDiv = document.createElement('div');
-
-  // Create array for modifier keys
-  var functionKeys = ["f1", "f2", "f3", "f4", "f5", "f6", "f7", "f8", "f9", "f10", "f11", "f12",
-    "Caps", "Tab", "Delete", "Home"];
-  var newDropdown = document.createElement('select');
-
-  for(i = 0; i < functionKeys.length; i++) {
-    // Create a new text input
-
-    var newDropdownOption = document.createElement("option");
-    newDropdownOption.value = functionKeys[i];
-    newDropdownOption.text = functionKeys[i];
-
-    newDropdown.add(newDropdownOption);
-  }
-
-  // Create buttons for creating and removing inputs
-  var newAddButton = document.createElement('input');
-  newAddButton.type = "button";
-  newAddButton.value = " + ";
-
-  var newDelButton = document.createElement('input');
-  newDelButton.type = "button";
-  newDelButton.value = " - ";
-
-  // Append new text input to the newDiv
-  newDiv.appendChild(newDropdown);
-
-  // Append new button inputs to the newDiv
-  newDiv.appendChild(newAddButton);
-  newDiv.appendChild(newDelButton);
-
-  // Append newDiv input to the mainContainer div
-  mainContainer.appendChild(newDiv);
-
-  // Add a handler to button for deleting the newDiv from the mainContainer
-  newAddButton.onclick = addNewFunctionKey;
-
-  newDelButton.onclick = function() {
-    mainContainer.removeChild(newDiv);
-  };
+function drag(event) {
+  event.dataTransfer.setData("text", event.target.id);
 }
 
-function addNewAlpha() {
-
-  // Get the main Div in which all the other divs will be added
-  var mainContainer = document.getElementById('mainContainer');
-
-  // Create a new div for holding text and button input elements
-  var newDiv = document.createElement('div');
-
-  // Create array for modifier keys
-  var alphaKeys = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r",
-   "s", "t", "u", "v", "w", "x", "y", "z"];
-  var newDropdown = document.createElement('select');
-
-  for(i = 0; i < alphaKeys.length; i++) {
-    // Create a new text input
-
-    var newDropdownOption = document.createElement("option");
-    newDropdownOption.value = alphaKeys[i];
-    newDropdownOption.text = alphaKeys[i];
-
-    newDropdown.add(newDropdownOption);
-  }
-
-  // Create buttons for creating and removing inputs
-  var newAddButton = document.createElement('input');
-  newAddButton.type = "button";
-  newAddButton.value = " + ";
-
-  var newDelButton = document.createElement('input');
-  newDelButton.type = "button";
-  newDelButton.value = " - ";
-
-  // Append new text input to the newDiv
-  newDiv.appendChild(newDropdown);
-
-  // Append new button inputs to the newDiv
-  newDiv.appendChild(newAddButton);
-  newDiv.appendChild(newDelButton);
-
-  // Append newDiv input to the mainContainer div
-  mainContainer.appendChild(newDiv);
-
-  // Add a handler to button for deleting the newDiv from the mainContainer
-  newAddButton.onclick = addNewAlpha;
-
-  newDelButton.onclick = function() {
-    mainContainer.removeChild(newDiv);
-  };
+function drop(event) {
+  event.preventDefault();
+  var data = event.dataTransfer.getData("text");
+  event.target.appendChild(document.getElementById(data));
 }
 
-function addNewCustom() {
+function select_all_element(divID) {
+  var ele = document.getElementById(divID).children;
+  var match = new Array();
+  var i = fill_array(ele,match);
+  //document.getElementById('sho').innerHTML = i;
+  //alert(document.getElementById('right_sidebar_drop_area').innerHTML); //test line
+  //alert(btn_ID_list.toString()); //test line
 
-  // Get the main Div in which all the other divs will be added
-  var mainContainer = document.getElementById('mainContainer');
+}
+function fill_array(e1,a1) {
+  //alert("made it to array"); // test line
+  btn_ID_list = [];
+  for(var i =0;i<e1.length;i++) {
+    btn_ID_list[i] = e1[i].id; //add the id of each element in the drop area
+    if(e1[i].id.indexOf('right_sidebar_drop_area') == 0)
+    a1.push(e1[i]);
+  }
+  return i;
+}
 
-  // Create a new div for holding text and button input elements
-  var newDiv = document.createElement('div');
+function open_this_modal_page(evt, modalPage) {
+  var i, x;
+  x = document.getElementsByClassName("modal_page");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  document.getElementById(modalPage).style.display = "block";
+}
 
-  var input = document.createElement("input");
-  input.setAttribute('type', 'text');
+function form_submit() {
+  document.getElementById("create_function_form").submit();
+  var form_function_name = document.getElementsByName('form_function_name')[0].value;
+  var form_function_key_binding = document.getElementsByName('form_function_key_binding')[0].value;
+  alert("form_function_name is: " + form_function_name + "\nform_function_key_binding is: " + form_function_key_binding +
+   "\nbtn_ID_list is: " + btn_ID_list.toString());
+}
 
-  // Create buttons for creating and removing inputs
-  var newAddButton = document.createElement('input');
-  newAddButton.type = "button";
-  newAddButton.value = " + ";
+// Get the modal_window
+var modal_window = document.getElementById('modal_window');
 
-  var newDelButton = document.createElement('input');
-  newDelButton.type = "button";
-  newDelButton.value = " - ";
+// Get the button that opens the modal_window
+var open_create_custom_function_button = document.getElementById("open_create_custom_function");
 
-  // Append new text input to the newDiv
-  newDiv.appendChild(input);
-
-  // Append new button inputs to the newDiv
-  newDiv.appendChild(newAddButton);
-  newDiv.appendChild(newDelButton);
-
-  // Append newDiv input to the mainContainer div
-  mainContainer.appendChild(newDiv);
-
-  // Add a handler to button for deleting the newDiv from the mainContainer
-  newAddButton.onclick = addNewCustom;
-
-  newDelButton.onclick = function() {
-    mainContainer.removeChild(newDiv);
-  };
+// When the user clicks the button, open the modal_window
+open_create_custom_function_button.onclick = function() {
+  select_all_element('right_sidebar_drop_area');
+  open_this_modal_page(event, 'modal_create_function_select_page')
+  modal_window.style.display = "block";
 }
