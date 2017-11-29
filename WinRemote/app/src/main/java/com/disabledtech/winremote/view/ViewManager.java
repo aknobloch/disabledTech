@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.view.View;
 import android.widget.GridLayout;
+import android.widget.LinearLayout;
 
 import com.disabledtech.winremote.R;
 import com.disabledtech.winremote.model.WinAction;
@@ -18,7 +19,7 @@ import java.util.List;
 public class ViewManager {
     public static void populateActivityButtons(Context c, List<WinAction> userActions, View.OnClickListener listener)
     {
-        GridLayout layout =(GridLayout)((Activity) c).findViewById(R.id.grid_layout);
+       GridLayout layout =(GridLayout) ((Activity) c).findViewById(R.id.grid_layout);
 
         // TODO pretty buttons
         for (WinAction action : userActions)
