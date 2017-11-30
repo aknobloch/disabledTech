@@ -3,6 +3,8 @@ package com.disabledtech.winremote.model;
 import android.content.Context;
 import android.widget.Button;
 
+import com.disabledtech.winremote.R;
+
 /**
  * This class is a simple wrapper around the AppCompatButton to
  * associate a WinAction with said button. It automatically
@@ -17,7 +19,7 @@ public class WinActionButton extends android.support.v7.widget.AppCompatButton
 
 	public WinActionButton(Context context, WinAction action)
 	{
-		super(context);
+		super(context, null, R.style.Button);
 		m_Action = action;
 		this.setText(action.getDisplayName());
 	}

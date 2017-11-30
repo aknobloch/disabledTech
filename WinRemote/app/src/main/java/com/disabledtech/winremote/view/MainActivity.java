@@ -17,7 +17,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridLayout;
-import android.widget.LinearLayout;
 
 import com.disabledtech.winremote.R;
 import com.disabledtech.winremote.control.BTConnectionClient;
