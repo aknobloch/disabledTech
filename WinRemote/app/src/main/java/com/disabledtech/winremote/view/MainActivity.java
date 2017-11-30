@@ -235,7 +235,7 @@ public class MainActivity extends AppCompatActivity
 	 */
 	private void populateActivityButtons(List<WinAction> userActions)
 	{
-		LinearLayout layout = (LinearLayout) findViewById(R.id.grid_layout);
+		GridLayout layout = (GridLayout) findViewById(R.id.grid_layout);
 
 		// TODO pretty buttons
 		for (WinAction action : userActions)
