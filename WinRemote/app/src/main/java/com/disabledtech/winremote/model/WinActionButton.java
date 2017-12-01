@@ -5,6 +5,8 @@ import android.widget.Button;
 
 import com.disabledtech.winremote.R;
 
+import static com.disabledtech.winremote.R.drawable.button;
+
 /**
  * This class is a simple wrapper around the AppCompatButton to
  * associate a WinAction with said button. It automatically
@@ -22,6 +24,7 @@ public class WinActionButton extends android.support.v7.widget.AppCompatButton
 		super(context, null, R.style.Button);
 		m_Action = action;
 		this.setText(action.getDisplayName());
+		this.setBackgroundResource(R.drawable.button);
 	}
 
 	public String getDisplayName()
