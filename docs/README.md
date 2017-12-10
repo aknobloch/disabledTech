@@ -11,6 +11,10 @@
 
 DisabledTech
 
+## Electron windows app exe from google drive?
+
+* [Get zip file here] (https://drive.google.com/file/d/1FEHiKrWGINArvsYxn1tvP0AG8a5BvgQj/view?usp=sharing) - testing to see if this works
+
 ## Repo location URL
 
 [REPO](https://github.com/soft-eng-practicum/disabledTech) - Click this link to quickly go back to our repository.
