@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<style>
+.btn {
+  letter-spacing: 2px;
+  font-size: 12px;
+  font-family: Montserrat, sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  max-width: 100%;
+}
+
+.btn-blue {
+  border-radius: 3px;
+  padding: 18px 65px;
+  border: 4px;
+  transition: all 0.2s ease-in-out;
+  background-color: #00a1f1;
+  color: #fff;
+  border-color: #00a1f1;
+  border-bottom: 4px solid #007fbe;
+}
+
+.contact_page {
+  text-align: center;
+}
+
+input, textarea {
+    width: 100%; /* Full width */
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+header {
+  text-align: center;
+}
+
+</style>
+<body>
+  <header>
+    <h1>Contact Form</h1>
+  </header>
+<div class="contact_page">
+  <!-- php didn't work with electron?!?  set to index for free redirect-->
+  <form id="contact_form" action="index.html" method="post" name="contact_form">
+    <div class="form_group">
+      <input id="name" type="text" placeholder="Your Name" name="name" required="required" class="form_control"/>
+    </div>
+    <div class="form_group">
+      <input id="email" type="email" placeholder="Your Email" name="email" required="required" class="form_control"/>
+    </div>
+    <div class="form_group">
+      <textarea rows="6" placeholder="Message" name="message" class="form_control"></textarea>
+    </div>
+    <div id="contact_form_response"></div>
+    <button id="contact_form_submit" type="submit" class="btn btn-blue">Submit</button>
+  </form>
+
+  <h1>Still needs some work...</h1>
+  <a href="index.html">Back to Welcome screen</a>
+</div>
+</body>
+</html>

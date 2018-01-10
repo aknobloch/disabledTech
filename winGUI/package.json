@@ -1,0 +1,13 @@
+{
+  "name": "winRemote",
+  "productName": "winRemote app",
+  "version": "0.1.1",
+  "main": "main.js",
+  "devDependencies": {
+    "electron": "^1.7.9",
+    "electron-packager": "^10.1.0"
+  },
+  "dependencies": {
+    "sqlite3": "^3.1.13"
+  }
+}

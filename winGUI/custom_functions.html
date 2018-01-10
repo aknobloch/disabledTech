@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel = "stylesheet" type = "text/css" href = "main.css" />
+  <title>Disabled Tech</title>
+
+</head>
+<body>
+
+
+  <div class="page_layout"> <!-- page_layout is the entire web page_layout -->
+    <div class="left_sidebar"> <!-- left_sidebar is div that hold everything on the sidebar -->
+      <div class="left_sidebar_container"> <!-- left_sidebar_container contains the left_sidebar bar web elements -->
+        <div class="left_sidebar_header"> <!-- left_sidebar_header of left side bar -->
+          <h1>
+            Select Your Functions!
+          </h1>
+          <h3>
+            Drag and drop to combine functions<br/>
+            in the pane on the right.  You can add<br/>
+            new functions by pressing the button<br/>
+            on the bottom of this pane.
+          </h3>
+        </div> <!-- End left_sidebar_header -->
+        <div class="left_sidebar_main"> <!-- left_sidebar_main body for left side bar -->
+
+          <!-- left_sidebar_button_holder allows drag on drop events  **ALL** button IDs prefixed with btn_ -->
+          <div id="left_sidebar_button_holder_id" class="left_sidebar_button_holder" ondrop="drop(event)" ondragover="allow_drop(event)">
+            <button class="button drag_and_drop_button" id="btn_copy" type="button" draggable="true" ondragstart="drag(event)">Copy</button>
+            <button class="button drag_and_drop_button" id="btn_paste" type="button" draggable="true" ondragstart="drag(event)">Paste</button>
+            <button class="button drag_and_drop_button" id="btn_taskManager" type="button" draggable="true" ondragstart="drag(event)">Task Manager</button>
+            <button class="button drag_and_drop_button" id="btn_buildVS" type="button" draggable="true" ondragstart="drag(event)">Build VS Project</button>
+            <button class="button drag_and_drop_button" id="btn_runCustom" type="button" draggable="true" ondragstart="drag(event)">Run Custom Script</button>
+            <button class="button drag_and_drop_button" id="btn_other" type="button" draggable="true" ondragstart="drag(event)">Do Other Things</button>
+            <button class="button drag_and_drop_button" id="btn_other1" type="button" draggable="true" ondragstart="drag(event)">Do Other Things1</button>
+            <button class="button drag_and_drop_button" id="btn_other2" type="button" draggable="true" ondragstart="drag(event)">Do Other Things2</button>
+          </div> <!-- End left_sidebar_button_holder -->
+        </div> <!-- End left_sidebar_main -->
+        <div class="left_sidebar_footer">
+          <button id="open_create_custom_function" class="button open_create_custom_function_button" type="button">NEW</button>
+        </div> <!-- End left_sidebar_footer -->
+      </div> <!-- End left_sidebar_container -->
+    </div> <!-- End left_sidebar -->
+    <div class="right_sidebar">
+      <!-- right_sidebar_drop_area is a pre defiened area to drop draggable elements on -->
+      <div id="right_sidebar_drop_area" ondrop="drop(event)" ondragover="allow_drop(event)">
+      </div> <!-- right_sidebar_drop_area -->
+      <a href="index.html">Back to Welcome screen</a>
+
+      <!-- This was a test line to make sure the connect number of elements were grabbed...
+      <p>total element no.</p>
+      <p id="sho">here</p>
+      ** end of test line -->
+    </div><!-- End right_sidebar -->
+
+
+    <!-- The Modal starts here -->
+    <div id="modal_window" class="modal">
+      <div class="modal_content">
+        <div class="modal_head">
+          <span onclick="document.getElementById('modal_window').style.display='none'"
+          class="close">&times;</span>
+        </div> <!-- End modal_head -->
+
+        <!-- modal_create_function_select_page opens a modal window and presents create options to the user -->
+        <div id="modal_create_function_select_page" class="modal_page">
+          <h2>Okay! New What?</h2>
+          <button class="button big_modal_select_page_button" id="create_keyboard_button" type="button" onclick="open_this_modal_page(event, 'modal_create_function_form_page')">Keyboard Button</button><br/>
+          <button class="button big_modal_select_page_button" id="create_custom_script_button" type="button">Custom Script</button><br/>
+        </div> <!-- End modal_create_function_select_page -->
+
+        <!-- modal_create_function_form_page is a modal page used to name and specify keybindings for a function -->
+        <div id="modal_create_function_form_page" class="modal_page">
+          <h2>Great!  What should we do?</h2>
+          <form id="create_function_form" action="custom_functions.html">
+            <!-- form_body is used to take a function name and its keybindings for backend tinkering -->
+            <div class="form_body">
+              <div class="form_label">
+                <label class="label_class" for="form_function_name">Name:</label>
+              </div> <!-- End form_label -->
+              <div class="form_text">
+                <input type="text" name="form_function_name" placeholder="Function name"><br>
+              </div> <!-- End form_text -->
+              <br/>
+              <div class="form_label">
+                <label class="label_class" for="form_function_key_binding">Function:</label>
+              </div> <!-- End form_label -->
+              <div class="form_text">
+                <input type="text" name="form_function_key_binding" placeholder="Key Binding"><br><br>
+              </div> <!-- End form_text -->
+            </div> <!-- End form_body -->
+            <div class="form_body_button_holder">
+              <div class="form_body_back_button">
+                <button class="button button_modal_form"
+                onclick="document.getElementById('modal_window').style.display='none'">Back</button> <br/>
+              </div> <!-- End form_body_back_button -->
+              <div class="form_body_submit_button">
+                <button class="button button_modal_form" onclick="form_submit()">Done!</button>
+              </div> <!-- End form_body_submit_button -->
+            </div> <!-- End form_body_button_holder -->
+          </form> <!-- End create_function_form -->
+        </div> <!-- End modal_create_function_form_page -->
+
+        <div id="new_modal_page_id" class="modal_page">
+          <h2>new_modal_page_id</h2>
+          <p>new_modal_page_id is an example on how to create more modal_page</p><br>
+        </div> <!-- End new_modal_page_id -->
+
+
+
+      </div> <!-- End modal_content -->
+    </div> <!-- End modal_window -->
+
+
+  </div> <!-- End page_layout -->
+
+  <!-- link to javascript page -->
+  <script src="myscripts.js"></script>
+
+</body>
+</html>
